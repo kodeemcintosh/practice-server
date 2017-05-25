@@ -1,10 +1,13 @@
 package router
 
 import (
-	handler "github.com/kvmac/server/handlers"
+	hello "github.com/kvmac/server/handlers/hello"
+	index "github.com/kvmac/server/handlers/index"
+	time "github.com/kvmac/server/handlers/time"
 	"net/http"
 )
 
+//Route is a structure for the api router call
 type Route struct {
 	Name        string
 	Method      string
@@ -12,25 +15,26 @@ type Route struct {
 	HandlerFunc http.HandlerFunc
 }
 
+//Routes because Route objects have to go somewhere
 type Routes []Route
 
-var AppRoutes = Routes{
+var appRoutes = Routes{
 	Route{
 		"Index",
 		"GET",
 		"/",
-		handler.Index,
+		index.Index,
 	},
 	Route{
 		"Hello",
 		"GET",
 		"/hello",
-		handler.Hello,
+		hello.Hello,
 	},
 	Route{
 		"GetTime",
 		"GET",
 		"/time",
-		handler.GetTime,
+		time.GetTime,
 	},
 }
