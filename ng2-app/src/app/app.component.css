@@ -1,0 +1,22 @@
+/*body {
+    background: crimson;
+}*/
+#header {
+    color: gold;
+}
+#button1 {
+    background: white;
+}
+#button2 {
+    background: white;
+}
+.square .left{
+    height: 10vw;
+    width: 10vw;
+    background: orchid; 
+}
+.square .right{
+    height: 10vw;
+    width: 10vw;
+    background: palegreen;
+}

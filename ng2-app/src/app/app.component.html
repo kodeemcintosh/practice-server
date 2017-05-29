@@ -1,3 +1,18 @@
-<h1>
-  {{title}}
-</h1>
+<section [ngStyle]="{'background': bgColor1}">
+<div id="specificUnitValue">
+  <div class="square left el"></div>
+</div>
+<div id="alternate">
+  <div class="square right el"></div>
+</div>
+<h1 [ngStyle]="{'color': fontColor}">{{title}}</h1>
+<div [ngStyle]="{'background': bgColor2}">
+<button (click)="animateSpin()" [ngStyle]="{'background': bgColorButton1}">button1
+</button>
+<button (click)="animateSlide()" [ngStyle]="{'background': bgColorButton2}">button2
+</button>
+</div>
+
+
+</section>
+
