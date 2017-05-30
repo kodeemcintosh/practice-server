@@ -13,7 +13,7 @@ func main() {
 	r := router.Router()
 
 	// r := mux.NewRouter()
-	// // r.Handle("/", http.FileServer(http.Dir("./ng2-app/")))
+	// r.Handle("/", http.FileServer(http.Dir("./ng2-app/")))
 	// // r.PathPrefix("/").Handler(http.FileServer(http.Dir("./ng2-app/")))
 	// r.HandleFunc("/", Index)
 	// // r.Handle("/", Index)
