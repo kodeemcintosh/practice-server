@@ -2,7 +2,6 @@ package router
 
 import (
 	hello "github.com/kvmac/server/framework/handlers/hello"
-	index "github.com/kvmac/server/framework/handlers/index"
 	time "github.com/kvmac/server/framework/handlers/time"
 	"net/http"
 )
@@ -19,12 +18,6 @@ type Route struct {
 type Routes []Route
 
 var appRoutes = Routes{
-	Route{
-		"Index",
-		"GET",
-		"/",
-		index.Index,
-	},
 	Route{
 		"Hello",
 		"GET",

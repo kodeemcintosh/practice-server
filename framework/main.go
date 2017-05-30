@@ -11,6 +11,7 @@ import (
 
 func main() {
 	r := router.Router()
+	// r.HandleFunc("/", index.Index)
 
 	// r := mux.NewRouter()
 	// r.Handle("/", http.FileServer(http.Dir("./ng2-app/")))
@@ -24,6 +25,6 @@ func main() {
 	// r.HandleFunc("/hello", Hello)
 	// r.HandleFunc("/time", GetTime)
 
-	http.ListenAndServe(":80", r)
+	http.ListenAndServe(":8080", r)
 
 }

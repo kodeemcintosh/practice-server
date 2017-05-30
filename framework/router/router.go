@@ -22,8 +22,10 @@ func Router() *mux.Router {
 			Name(route.Name).
 			Handler(route.HandlerFunc)
 	}
+	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./static/")))
 
-	r.Path("/").Handler(http.FileServer(http.Dir("ng2-app/")))
+	// r.Path("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("./static")))
+	// r.Handler("/", http.StripPrefix("/", http.FileServer(http.Dir("./static"))))
 
 	return r
 
