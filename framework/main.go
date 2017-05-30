@@ -24,6 +24,6 @@ func main() {
 	// r.HandleFunc("/hello", Hello)
 	// r.HandleFunc("/time", GetTime)
 
-	http.ListenAndServe(":8080", r)
+	http.ListenAndServe(":80", r)
 
 }
